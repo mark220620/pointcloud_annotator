@@ -418,7 +418,7 @@ def run_annotate(frame_id):
             status.text = (
                 f"frame {fid} [{pos}]{star}    label: {state['label']} ({name})    "
                 f"brush: {state['brush']}px    undo: {len(state['undo'])}    "
-                f"[N/P]frame  click swatch=label  [Shift+drag]paint  [U]ndo  [W]save  [Q]quit  [[ / ]]brush size"
+                f"[N/P]frame  click swatch=label  [Shift+drag]paint  [U]ndo  [W]save  [Q]quit  [[ / ]]brush  [RMB-drag]dolly  [MMB-drag]pan"
             )
         # Highlight the active label swatch with a bright border-ish effect by
         # brightening only the selected one (others dimmed).

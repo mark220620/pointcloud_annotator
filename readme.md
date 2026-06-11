@@ -125,6 +125,8 @@ on the right panel.
 | Action / Shortcut        | Description |
 |--------------------------|-------------|
 | **Left-drag**            | Rotate the view (both panels stay in sync) |
+| **Right-drag**           | Dolly (move camera forward / backward) |
+| **Middle-drag**          | Pan |
 | **Mouse wheel**          | Zoom |
 | **Shift + left-drag**    | **Paint** points under the brush with the current label |
 | **Click a top swatch**   | Select target label |
