@@ -7,7 +7,7 @@ import open3d as o3d
 # ============================================================
 # Path settings
 # ============================================================
-PRED_FOLDER = r"E:\pickle\point_clouds_annotator\citystreet_rainy_day_2026-05-14-09-49-14\colored_360_pcd_filter"
+PRED_FOLDER = r"E:\pickle\point_clouds_annotator\scenes\citystreet_rainy_day_2026-05-14-09-49-14\colored_360_pcd_filter"
 GT_FOLDER   = PRED_FOLDER  # GT .npz saved alongside prediction files
 
 # Raw LiDAR PCD folder (VLS128_pcd).  Set to None to disable the left panel.

@@ -23,21 +23,22 @@ point_clouds_annotator/
 ├── readme.md
 ├── demo.gif
 │
-└── <scene_name>/
-    ├── colored_360_pcd_filter/     ← prediction labels + annotation output
-    │   ├── 000000.pcd
-    │   ├── 000000_labels.npz       ← input: predicted per-point labels
-    │   ├── 000000_gt.npz           ← output: saved GT labels (after annotating)
-    │   ├── 000000_gt.pcd           ← output: GT cloud coloured by label
-    │   └── ...
-    ├── images/                     ← camera images for visual reference
-    │   ├── main/
-    │   ├── left/
-    │   ├── right/
-    │   ├── rear/
-    │   ├── sideL/
-    │   └── sideR/
-    └── VLS128_pcd/                 ← raw LiDAR PCD (shown in left panel for reference)
+└── scenes/
+    └── <scene_name>/
+        ├── colored_360_pcd_filter/     ← prediction labels + annotation output
+        │   ├── 000000.pcd
+        │   ├── 000000_labels.npz       ← input: predicted per-point labels
+        │   ├── 000000_gt.npz           ← output: saved GT labels (after annotating)
+        │   ├── 000000_gt.pcd           ← output: GT cloud coloured by label
+        │   └── ...
+        ├── images/                     ← camera images for visual reference
+        │   ├── main/
+        │   ├── left/
+        │   ├── right/
+        │   ├── rear/
+        │   ├── sideL/
+        │   └── sideR/
+        └── VLS128_pcd/                 ← raw LiDAR PCD (shown in left panel for reference)
 ```
 
 ---
@@ -72,7 +73,7 @@ folder of the scene you want to annotate:
 
 ```python
 # gt_annotator.py — top of file
-PRED_FOLDER = r"C:\path\to\<scene>\colored_360_pcd_filter"
+PRED_FOLDER = r"C:\path\to\point_clouds_annotator\scenes\<scene_name>\colored_360_pcd_filter"
 ```
 
 `RAW_FOLDER` is derived automatically from `PRED_FOLDER` (looks for a sibling

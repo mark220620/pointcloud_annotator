@@ -1,7 +1,5 @@
-# Scene data folders — pack and share separately
-*/colored_360_pcd_filter/
-*/VLS128_pcd/
-*/images/
+# Scene data — pack and share separately
+scenes/
 
 # Python
 __pycache__/
