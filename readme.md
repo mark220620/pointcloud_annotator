@@ -11,6 +11,8 @@ The window is split into two panels:
 - **Left** — raw LiDAR point cloud (`VLS128_pcd`) for visual reference
 - **Right** — semantic label cloud (paintable); both panels share the same camera
 
+![Demo](demo.gif)
+
 ---
 
 ## Folder structure
