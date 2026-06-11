@@ -1,0 +1,13 @@
+# Scene data folders — pack and share separately
+*/colored_360_pcd_filter/
+*/VLS128_pcd/
+*/images/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Misc
+.DS_Store
+Thumbs.db
