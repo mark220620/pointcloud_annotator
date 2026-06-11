@@ -21,27 +21,23 @@ The window is split into two panels:
 point_clouds_annotator/
 ├── gt_annotator.py
 ├── readme.md
+├── demo.gif
 │
-├── citystreet_rainy_day_2026-05-14-09-49-14/
-│   ├── colored_360_pcd_filter/     ← prediction labels + annotation output
-│   │   ├── 000000.pcd
-│   │   ├── 000000_labels.npz       ← input: predicted per-point labels
-│   │   ├── 000000_gt.npz           ← output: saved GT labels (after annotating)
-│   │   ├── 000000_gt.pcd           ← output: GT cloud coloured by label
-│   │   └── ...
-│   ├── images/                     ← camera images for visual reference
-│   │   ├── main/
-│   │   ├── left/
-│   │   ├── right/
-│   │   ├── rear/
-│   │   ├── sideL/
-│   │   └── sideR/
-│   └── VLS128_pcd/                 ← raw LiDAR PCD (shown in left panel for reference)
-│
-├── citystreet_sunny_day_2026-05-07-12-25-41/   (same structure)
-├── citystreet_sunny_day_2026-05-20-14-42-50/   (same structure)
-├── countryside_rainy_day_2026-05-14-09-45-57/  (same structure)
-└── highway_rainy_day_2026-05-14-09-15-56/      (same structure)
+└── <scene_name>/
+    ├── colored_360_pcd_filter/     ← prediction labels + annotation output
+    │   ├── 000000.pcd
+    │   ├── 000000_labels.npz       ← input: predicted per-point labels
+    │   ├── 000000_gt.npz           ← output: saved GT labels (after annotating)
+    │   ├── 000000_gt.pcd           ← output: GT cloud coloured by label
+    │   └── ...
+    ├── images/                     ← camera images for visual reference
+    │   ├── main/
+    │   ├── left/
+    │   ├── right/
+    │   ├── rear/
+    │   ├── sideL/
+    │   └── sideR/
+    └── VLS128_pcd/                 ← raw LiDAR PCD (shown in left panel for reference)
 ```
 
 ---
@@ -76,8 +72,11 @@ folder of the scene you want to annotate:
 
 ```python
 # gt_annotator.py — top of file
-PRED_FOLDER = r"C:\path\to\point_clouds_annotator\citystreet_rainy_day_2026-05-14-09-49-14\colored_360_pcd_filter"
+PRED_FOLDER = r"C:\path\to\<scene>\colored_360_pcd_filter"
 ```
+
+`RAW_FOLDER` is derived automatically from `PRED_FOLDER` (looks for a sibling
+`VLS128_pcd` folder). If it does not exist the left panel is hidden.
 
 To jump directly to a specific frame instead of picking interactively:
 
