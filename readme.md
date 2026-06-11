@@ -57,10 +57,10 @@ cd point_clouds_annotator
 ```bash
 conda create -n annotator python=3.10 -y
 conda activate annotator
-pip install numpy open3d
+pip install "numpy==1.23.0" "open3d>=0.15.1"
 ```
 
-> **Python 3.10 + open3d ≥ 0.15.1** is required.
+> Tested with **Python 3.10, numpy 1.23.0, open3d 0.15.1**.
 > The annotator uses the modern Open3D GUI (`open3d.visualization.gui`).
 > Do **not** mix it with the legacy `draw_geometries` in the same process —
 > the legacy viewer calls `glfwTerminate()` on close, which breaks all later
