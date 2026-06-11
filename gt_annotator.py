@@ -140,7 +140,8 @@ def save_gt(frame_id, points, labels):
 
 
 def labels_to_colors(labels):
-    return _LUT[labels.astype(np.uint8) % 256].astype(np.float64) / 255.0
+    idx = np.clip(labels.astype(np.int32), 0, 255)
+    return _LUT[idx].astype(np.float64) / 255.0
 
 
 def make_pcd(points, labels):
